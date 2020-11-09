@@ -1,0 +1,41 @@
+@import '../../../assets/styles/graphic-charter';
+
+$product: 'product';
+
+.#{$product} {
+  &-container {
+    border: solid 2px $green;
+    background-color: $gray;
+    cursor: pointer;
+    padding: 15px;
+    height: 100%;
+    &:hover {
+      border: solid 2px $green-dark;
+      background-color: $white;
+    }
+  }
+  &__name {
+    color: $green-dark;
+    font-weight: bold;
+  }
+  &__icon {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    &_delete {
+      color: $orange;
+    }
+    &_edit {
+      color: $blue;
+    }
+  }
+  &__link {
+    font-weight: bold;
+    color: $orange;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../assets/styles/graphic-charter';
+
+$productForm: 'product-form';
+
+.#{$productForm} {
+  &__label {
+    font-weight: bold;
+  }
+  &__input {
+    font-size: 14px;
+    border: 0;
+    border-bottom: solid 1px $green-dark;
+    color: $green-dark;
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    height: auto;
+    &::placeholder {
+      font-size: 14px;
+      font-weight: normal;
+      color: $green;
+    }
+    &:focus {
+      box-shadow: none;
+      outline-color: $green-light;
+      border-bottom: solid 1px $gray;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &__button {
+    background-color: $orange;
+    padding: 7px 13px;
+    border: none;
+    color: $gray;
+    cursor: pointer;
+    margin-top: 15px;
+    &:hover {
+      background-color: transparent;
+      border: solid 2px $orange;
+      color: $orange;
+      font-weight: bold;
+    }
+    &_disabled {
+      cursor: not-allowed;
+      opacity: .7;
+      &:hover {
+        background-color: $orange;
+        border: none;
+        color: $gray;
+        font-weight: normal;
+      }
+    }
+  }
+}

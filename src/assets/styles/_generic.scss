@@ -1,0 +1,17 @@
+@import '../styles/graphic-charter';
+
+$main: 'main';
+$section: 'section';
+
+.#{$main} {
+  background: $green-light;
+  min-height: 100vh;
+  padding-top: 87px;
+}
+
+.#{$section} {
+  &__title {
+    color: $green-dark;
+    margin-bottom: 33px;
+  }
+}

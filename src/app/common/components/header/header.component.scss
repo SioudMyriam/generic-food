@@ -1,0 +1,62 @@
+@import '../../../../assets/styles/graphic-charter';
+
+$header: 'header';
+
+.#{$header} {
+  background-color: $green-dark;
+  color: $gray;
+  height: 50px;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  z-index: 2;
+  &__link {
+    color: $gray;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__logo {
+    margin-left: 16px;
+    color: $gray;
+  }
+  &__menu {
+    border-color: transparent !important;
+    background: none !important;
+    padding: 11px;
+    &:focus {
+      outline: none;
+    }
+    &-icon {
+      @media (min-width: 768px) {
+        display: none;
+      }
+      width: 30px;
+      height: 20px;
+      position: relative;
+      margin: 0px;
+      span {
+          position: absolute;
+          margin-top: 0 !important;
+          height: 3px !important;
+          width: 100% !important;
+          left: 0;
+          background-color: $gray;
+          border-radius: 9px !important;
+      }
+      span:nth-child(1) {
+          top: 0px;
+      }
+      span:nth-child(2) {
+          top: 10px;
+      }
+      span:nth-child(3) {
+          top: 20px;
+      }
+    }
+    &-list {
+      z-index: 2;
+      background-color: $green-dark;
+    }
+  }
+}

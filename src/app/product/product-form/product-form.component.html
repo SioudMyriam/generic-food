@@ -1,0 +1,35 @@
+<main class="main">
+  <section class="section container-fluid col-lg-6 col-md-8 col-sm-10 justify-content-center">
+    <h4 class="section__title text-center">Nouveau produit</h4>
+    <form [formGroup]="productForm" class="text-center">
+      <div class="form-group">
+        <label class="product-form__label text-md-right mr-3 col-sm-5 col-md-4 col-lg-4">Nom :</label>
+        <input placeholder="Nom du produit" class="product-form__input" name="scientificName" formControlName="name"
+          type="text">
+      </div>
+      <div class="form-group">
+        <label class="product-form__label text-md-right mr-3 col-sm-5 col-md-4 col-lg-4">Nom scientifique :</label>
+        <input placeholder="Nom scientifique du produit" class="product-form__input" formControlName="scientificName"
+          name="scientificName" type="text">
+      </div>
+      <div class="form-group">
+        <label class="product-form__label text-md-right mr-3 col-sm-5 col-md-4 col-lg-4">Id du groupe :</label>
+        <input placeholder="Id du groupe" class="product-form__input" formControlName="groupId" name="groupId"
+          type="number">
+      </div>
+      <div class="form-group">
+        <label class="product-form__label text-md-right mr-3 col-sm-5 col-md-4 col-lg-4">Id du sous-groupe :</label>
+        <input placeholder="Id du sous-groupe" class="product-form__input" formControlName="subGroupId"
+          name="subGroupId" type="number">
+      </div>
+      <div>
+        <button *ngIf="!isEditMode" class="product-form__button" (click)="addNewProduct()"
+          [ngClass]="!productForm.controls['name'].valid || !productForm.controls['scientificName'].valid || !productForm.controls['groupId'].valid || !productForm.controls['subGroupId'].valid ? 'product-form__button_disabled': ''"
+          [disabled]="!productForm.controls['name'].valid || !productForm.controls['scientificName'].valid || !productForm.controls['groupId'].valid || !productForm.controls['subGroupId'].valid">Ajouter</button>
+        <button *ngIf="isEditMode" class="product-form__button" (click)="editProduct()"
+          [ngClass]="!productForm.controls['name'].valid || !productForm.controls['scientificName'].valid || !productForm.controls['groupId'].valid || !productForm.controls['subGroupId'].valid ? 'product-form__button_disabled': ''"
+          [disabled]="!productForm.controls['name'].valid || !productForm.controls['scientificName'].valid || !productForm.controls['groupId'].valid || !productForm.controls['subGroupId'].valid">Modifier</button>
+      </div>
+    </form>
+  </section>
+</main>

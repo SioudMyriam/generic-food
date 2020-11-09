@@ -1,0 +1,19 @@
+<header class="header">
+  <nav class="navbar navbar-expand-md p-0">
+    <div class="header__logo navbar-brand">Logo</div>
+    <button type="button" class="header__menu navbar-toggle" [attr.aria-expanded]="!collapsed"
+      aria-controls="headerNavbarContent" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+      <div class="header__menu-icon">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+    </button>
+    <div class="header__menu-list collapse navbar-collapse px-3" [class.collapse]="collapsed" id="headerNavbarContent">
+      <div class="navbar-nav ml-auto">
+        <a class="header__link nav-item nav-link" [routerLink]="['/products']"
+          routerLinkActive="router-link-active">Products</a>
+      </div>
+    </div>
+  </nav>
+</header>

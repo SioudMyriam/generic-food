@@ -1,0 +1,34 @@
+<main class="main">
+  <section class="section container-fluid col-md-10 justify-content-center">
+    <h4 class="section__title text-center">Liste des produits</h4>
+    <div class="product__link text-right" [routerLink]="['/newProduct']">
+      + Ajouter un produit
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-lg-3 col-md-4 col-sm-12 py-3" *ngFor="let product of products">
+        <div class="product-container">
+          <div class="mb-2">
+            <p class="product__name text-center">
+              {{product.name}}
+            </p>
+            <p class="m-0">
+              <strong>Nom Scientifique : </strong>{{product.scientificName}}
+            </p>
+            <p class="m-0">
+              <strong>Groupe ID : </strong>{{product.groupId}}
+            </p>
+            <p class="m-0">
+              <strong>Sous-groupe ID : </strong>{{product.subGroupId}}
+            </p>
+          </div>
+          <div class="product__icon text-right">
+            <mat-icon class="product__icon_edit" title="Modifier" (click)="editProduct(product.id)">edit</mat-icon>
+            <mat-icon class="product__icon_delete" title="Supprimer" (click)="deleteProduct(product.id, product.name)">
+              delete_forever
+            </mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
