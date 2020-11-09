@@ -1,6 +1,8 @@
 # GenericFood
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+Clone the project from https://github.com/SioudMyriam/generic-food.git. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+Run `npm install`
 
 ## Development server
 
