@@ -1,4 +1,4 @@
-***les améliorations et les raccourcis pris à cause du temps imparti***
+***les améliorations à compléter***
 
 1/ Test unitaire incomplet
 2/ Vérifier / adapter l'application pour les différents types de navigateurs
